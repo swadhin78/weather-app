@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.6s ease;
+}
+
+body.day {
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+}
+
+body.night {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.wrapper {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  width: 60%;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #222;
+}
+
+.current-weather img {
+  width: 100px;
+  height: 100px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.extra {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card {
+  width: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  text-align: center;
+}
+
+.card img {
+  width: 50px;
+}
+
+.card h4 {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.card p {
+  font-size: 12px;
+}
+body.day {
+  background-image: url('43.jpg'); /* ← apni image ka naam likho */
+  background-size: cover;          /* poore screen me fit ho jaye */
+  background-position: center;     /* beech me rahe */
+  background-repeat: no-repeat;    /* repeat na ho */
+  background-attachment: fixed;    /* scroll karne par bhi fixed rahe */
+}
